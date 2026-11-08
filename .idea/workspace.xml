@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5fb8d843-0645-4151-9b2d-51f9fd764be4" name="Changes" comment="Menambahkan data putusan-50.csv hingga P025">
-      <change afterPath="$PROJECT_DIR$/src/main/java/DynamicArray.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/StrukturData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uts-struktur-data-narkotika-kelompok-26.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uts-struktur-data-narkotika-kelompok-26.iml" afterDir="false" />
+
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +71,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "settings.editor.selected.configurable": "vcs.Git",
     "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
   }
@@ -152,7 +149,6 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Merge remote-tracking branch 'origin/main'" />
     <MESSAGE value="Menambahkan struktur folder dan template file wajib UTS" />
-    <MESSAGE value="Menambahkan data putusan-50.csv hingga P025" />
-    <option name="LAST_COMMIT_MESSAGE" value="Menambahkan data putusan-50.csv hingga P025" />
+
   </component>
 </project>
