@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5fb8d843-0645-4151-9b2d-51f9fd764be4" name="Changes" comment="Menambahkan putusan 26 sampai 50">
-      <change afterPath="$PROJECT_DIR$/src/main/java/CsvReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Putusan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -142,7 +138,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Menambahkan struktur folder dan template file wajib UTS" />
-    <MESSAGE value="Menambahkan putusan 26 sampai 50" />
-    <option name="LAST_COMMIT_MESSAGE" value="Menambahkan putusan 26 sampai 50" />
+
   </component>
 </project>
