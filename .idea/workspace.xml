@@ -4,19 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5fb8d843-0645-4151-9b2d-51f9fd764be4" name="Changes" comment="Menambahkan struktur folder dan template file wajib UTS">
+    <list default="true" id="5fb8d843-0645-4151-9b2d-51f9fd764be4" name="Changes" comment="Menambahkan data putusan-50.csv hingga P025">
+      <change afterPath="$PROJECT_DIR$/src/main/java/DynamicArray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/StrukturData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uts-struktur-data-narkotika-kelompok-26.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uts-struktur-data-narkotika-kelompok-26.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/putusan-50.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/putusan-50.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="fitur-struktur-data" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -56,7 +65,7 @@
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "database.data.extractors.current.export.id": "CSV-Groovy.csv.groovy",
     "database.data.extractors.current.id": "CSV-Groovy.csv.groovy",
-    "git-widget-placeholder": "fitur-struktur-data",
+    "git-widget-placeholder": "fitur-struktur-inti",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/HP/OneDrive/Documents/GitHub/uts-struktur-data-narkotika-kelompok-26/data",
@@ -74,19 +83,6 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\HP\OneDrive\Documents\GitHub\uts-struktur-data-narkotika-kelompok-26\data" />
     </key>
-  </component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="uts-struktur-data-narkotika-kelompok-26" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="uts-struktur-data-narkotika-kelompok-26" />
-      <option name="filePath" />
-      <method v="2" />
-    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -108,7 +104,9 @@
       <workItem from="1794044707999" duration="19000" />
       <workItem from="1794044749647" duration="14000" />
       <workItem from="1794044787586" duration="10373000" />
-      <workItem from="1794068194809" duration="5575000" />
+      <workItem from="1794068194809" duration="7068000" />
+      <workItem from="1794121288293" duration="1923000" />
+      <workItem from="1794133045475" duration="5543000" />
     </task>
     <task id="LOCAL-00001" summary="Menambahkan struktur folder dan template file wajib UTS">
       <option name="closed" value="true" />
@@ -126,7 +124,15 @@
       <option name="project" value="LOCAL" />
       <updated>1794045193812</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Menambahkan data putusan-50.csv hingga P025">
+      <option name="closed" value="true" />
+      <created>1794075676023</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1794075676023</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,7 +150,9 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="Merge remote-tracking branch 'origin/main'" />
     <MESSAGE value="Menambahkan struktur folder dan template file wajib UTS" />
-    <option name="LAST_COMMIT_MESSAGE" value="Menambahkan struktur folder dan template file wajib UTS" />
+    <MESSAGE value="Menambahkan data putusan-50.csv hingga P025" />
+    <option name="LAST_COMMIT_MESSAGE" value="Menambahkan data putusan-50.csv hingga P025" />
   </component>
 </project>
