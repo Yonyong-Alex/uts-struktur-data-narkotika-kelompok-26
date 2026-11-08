@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5fb8d843-0645-4151-9b2d-51f9fd764be4" name="Changes" comment="Menambahkan struktur folder dan template file wajib UTS">
+    <list default="true" id="5fb8d843-0645-4151-9b2d-51f9fd764be4" name="Changes" comment="Menambahkan putusan 26 sampai 50">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/putusan-50.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/putusan-50.csv" afterDir="false" />
     </list>
@@ -65,7 +65,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "settings.editor.selected.configurable": "vcs.Git",
     "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
   }
@@ -74,19 +74,6 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\HP\OneDrive\Documents\GitHub\uts-struktur-data-narkotika-kelompok-26\data" />
     </key>
-  </component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="uts-struktur-data-narkotika-kelompok-26" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="uts-struktur-data-narkotika-kelompok-26" />
-      <option name="filePath" />
-      <method v="2" />
-    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -145,6 +132,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Menambahkan struktur folder dan template file wajib UTS" />
-    <option name="LAST_COMMIT_MESSAGE" value="Menambahkan struktur folder dan template file wajib UTS" />
+    <MESSAGE value="Menambahkan putusan 26 sampai 50" />
+    <option name="LAST_COMMIT_MESSAGE" value="Menambahkan putusan 26 sampai 50" />
   </component>
 </project>
