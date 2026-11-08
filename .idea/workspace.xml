@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5fb8d843-0645-4151-9b2d-51f9fd764be4" name="Changes" comment="Menambahkan data putusan-50.csv hingga P025">
-      <change afterPath="$PROJECT_DIR$/src/main/java/DynamicArray.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/StrukturData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uts-struktur-data-narkotika-kelompok-26.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uts-struktur-data-narkotika-kelompok-26.iml" afterDir="false" />
+    <list default="true" id="5fb8d843-0645-4151-9b2d-51f9fd764be4" name="Changes" comment="Menambahkan putusan 26 sampai 50">
+      <change afterPath="$PROJECT_DIR$/src/main/java/CsvReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Putusan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +75,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "settings.editor.selected.configurable": "vcs.Git",
     "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
   }
@@ -104,9 +105,7 @@
       <workItem from="1794044707999" duration="19000" />
       <workItem from="1794044749647" duration="14000" />
       <workItem from="1794044787586" duration="10373000" />
-      <workItem from="1794068194809" duration="7068000" />
-      <workItem from="1794121288293" duration="1923000" />
-      <workItem from="1794133045475" duration="5543000" />
+      <workItem from="1794068194809" duration="5575000" />
     </task>
     <task id="LOCAL-00001" summary="Menambahkan struktur folder dan template file wajib UTS">
       <option name="closed" value="true" />
@@ -124,15 +123,7 @@
       <option name="project" value="LOCAL" />
       <updated>1794045193812</updated>
     </task>
-    <task id="LOCAL-00003" summary="Menambahkan data putusan-50.csv hingga P025">
-      <option name="closed" value="true" />
-      <created>1794075676023</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1794075676023</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,9 +141,8 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Merge remote-tracking branch 'origin/main'" />
     <MESSAGE value="Menambahkan struktur folder dan template file wajib UTS" />
-    <MESSAGE value="Menambahkan data putusan-50.csv hingga P025" />
-    <option name="LAST_COMMIT_MESSAGE" value="Menambahkan data putusan-50.csv hingga P025" />
+    <MESSAGE value="Menambahkan putusan 26 sampai 50" />
+    <option name="LAST_COMMIT_MESSAGE" value="Menambahkan putusan 26 sampai 50" />
   </component>
 </project>
