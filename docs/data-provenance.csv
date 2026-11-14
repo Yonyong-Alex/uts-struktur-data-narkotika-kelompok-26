@@ -74,79 +74,78 @@ P024,pasalTerbukti,Pasal 114 ayat (2) Jo. Pasal 132 ayat (1) Undang-Undang Nomor
 P025,vonisBulan,240,putusan_narkotika 25.pdf,36,Excel,Fakhir,verified
 P025,beratBarangBuktiGram,5546.67,putusan_narkotika 25.pdf,9,Excel,Fakhir,verified
 P025,pasalTerbukti,Pasal 114 ayat (2) Jo. Pasal 132 ayat (1) UU RI Nomor 35 Tahun 2009 tentang Narkotika,putusan_narkotika 25.pdf,36,Excel,Fakhir,verified
-case_id,field_name,value,source_file,source_page,extractor,reviewer,status
-P026,vonisBulan,84,putusan_26.pdf,25,Fahir,Excel,unverified
-P026,beratBarangBuktiGram,1.913,putusan_26.pdf,25,Fahir,Excel,unverified
-P026,pasalTerbukti,Pasal 114 Ayat 1,putusan_26.pdf,23,Fahir,Excel,unverified
-P027,vonisBulan,96,putusan_27.pdf,23,Fahir,Excel,unverified
-P027,beratBarangBuktiGram,12.36,putusan_27.pdf,24,Fahir,Excel,unverified
-P027,pasalTerbukti,Pasal 114 Ayat (2),putusan_27.pdf,20,Fahir,Excel,unverified
-P028,vonisBulan,84,putusan_28.pdf,45,Fahir,Excel,unverified
-P028,beratBarangBuktiGram,34.455,putusan_28.pdf,21,Fahir,Excel,unverified
-P028,pasalTerbukti,Pasal 609 Ayat (2) huruf a,putusan_28.pdf,41,Fahir,Excel,unverified
-P029,vonisBulan,72,putusan_29.pdf,18,Fahir,Excel,unverified
-P029,beratBarangBuktiGram,1.300,putusan_29.pdf,18,Fahir,Excel,unverified
-P029,pasalTerbukti,Pasal 114 Ayat (1),putusan_29.pdf,15,Fahir,Excel,unverified
-P030,vonisBulan,84,putusan_30.pdf,38,Fahir,Excel,unverified
-P030,beratBarangBuktiGram,34.455,putusan_30.pdf,22,Fahir,Excel,unverified
-P030,pasalTerbukti,Pasal 609 Ayat (2) huruf a,putusan_30.pdf,38,Fahir,Excel,unverified
-P031,vonisBulan,228,putusan_31.pdf,36,Fahir,Excel,unverified
-P031,beratBarangBuktiGram,12961.18,putusan_31.pdf,2,Fahir,Excel,unverified
-P031,pasalTerbukti,Pasal 114 ayat (2) jo. Pasal 132 ayat (1),putusan_31.pdf,36,Fahir,Excel,unverified
-P032,vonisBulan,228,putusan_32.pdf,36,Fahir,Excel,unverified
-P032,beratBarangBuktiGram,12961.18,putusan_32.pdf,2,Fahir,Excel,unverified
-P032,pasalTerbukti,Pasal 114 ayat (2) jo. Pasal 132 ayat (1),putusan_32.pdf,36,Fahir,Excel,unverified
-P033,vonisBulan,96,putusan_33.pdf,26,Fahir,Excel,unverified
-P033,beratBarangBuktiGram,48.36,putusan_33.pdf,2,Fahir,Excel,unverified
-P033,pasalTerbukti,Pasal 114 ayat (2),putusan_33.pdf,26,Fahir,Excel,unverified
-P034,vonisBulan,216,putusan_34_3.pdf,61,Fahir,Excel,unverified
-P034,beratBarangBuktiGram,5761.815,putusan_34_3.pdf,62,Fahir,Excel,unverified
-P034,pasalTerbukti,Pasal 114 ayat (2) dan Pasal 119 ayat (2),putusan_34_3.pdf,61,Fahir,Excel,unverified
-P035,vonisBulan,66,putusan_35_2.pdf,17,Fahir,Excel,unverified
-P035,beratBarangBuktiGram,0.546,putusan_35_2.pdf,17,Fahir,Excel,unverified
-P035,pasalTerbukti,Pasal 114 ayat (1),putusan_35_2.pdf,17,Fahir,Excel,unverified
-P036,vonisBulan,84,putusan_36.pdf,21,Fahir,Excel,unverified
-P036,beratBarangBuktiGram,18.592,putusan_36.pdf,21,Fahir,Excel,unverified
-P036,pasalTerbukti,Pasal 114 ayat (2),putusan_36.pdf,21,Fahir,Excel,unverified
-P037,vonisBulan,70,putusan_37.pdf,18,Fahir,Excel,unverified
-P037,beratBarangBuktiGram,1.221,putusan_37.pdf,19,Fahir,Excrl,unverified
-P037,pasalTerbukti,Pasal 114 ayat (1),putusan_37.pdf,18,Fahir,Excel,unverified
-P038,vonisBulan,90,putusan_38_2.pdf,35,Fahir,Excel,unverified
-P038,beratBarangBuktiGram,15.722,putusan_38_2.pdf,5,Fahir,Excel,unverified
+P026,vonisBulan,84,putusan_26.pdf,25,Fahir,Excel,verified
+P026,beratBarangBuktiGram,1.913,putusan_26.pdf,25,Fahir,Excel,verified
+P026,pasalTerbukti,Pasal 114 Ayat 1,putusan_26.pdf,23,Fahir,Excel,verified
+P027,vonisBulan,96,putusan_27.pdf,23,Fahir,Excel,verified
+P027,beratBarangBuktiGram,12.36,putusan_27.pdf,24,Fahir,Excel,verified
+P027,pasalTerbukti,Pasal 114 Ayat (2),putusan_27.pdf,20,Fahir,Excel,verified
+P028,vonisBulan,84,putusan_28.pdf,45,Fahir,Excel,verified
+P028,beratBarangBuktiGram,34.455,putusan_28.pdf,21,Fahir,Excel,verified
+P028,pasalTerbukti,Pasal 609 Ayat (2) huruf a,putusan_28.pdf,41,Fahir,Excel,verified
+P029,vonisBulan,72,putusan_29.pdf,18,Fahir,Excel,verified
+P029,beratBarangBuktiGram,1.300,putusan_29.pdf,18,Fahir,Excel,verified
+P029,pasalTerbukti,Pasal 114 Ayat (1),putusan_29.pdf,15,Fahir,Excel,verified
+P030,vonisBulan,84,putusan_30.pdf,38,Fahir,Excel,verified
+P030,beratBarangBuktiGram,34.455,putusan_30.pdf,22,Fahir,Excel,verified
+P030,pasalTerbukti,Pasal 609 Ayat (2) huruf a,putusan_30.pdf,38,Fahir,Excel,verified
+P031,vonisBulan,228,putusan_31.pdf,36,Fahir,Excel,verified
+P031,beratBarangBuktiGram,12961.18,putusan_31.pdf,2,Fahir,Excel,verified
+P031,pasalTerbukti,Pasal 114 ayat (2) jo. Pasal 132 ayat (1),putusan_31.pdf,36,Fahir,Excel,verified
+P032,vonisBulan,228,putusan_32.pdf,36,Fahir,Excel,verified
+P032,beratBarangBuktiGram,12961.18,putusan_32.pdf,2,Fahir,Excel,verified
+P032,pasalTerbukti,Pasal 114 ayat (2) jo. Pasal 132 ayat (1),putusan_32.pdf,36,Fahir,Excel,verified
+P033,vonisBulan,96,putusan_33.pdf,26,Fahir,Excel,verified
+P033,beratBarangBuktiGram,48.36,putusan_33.pdf,2,Fahir,Excel,verified
+P033,pasalTerbukti,Pasal 114 ayat (2),putusan_33.pdf,26,Fahir,Excel,verified
+P034,vonisBulan,216,putusan_34_3.pdf,61,Fahir,Excel,verified
+P034,beratBarangBuktiGram,5761.815,putusan_34_3.pdf,62,Fahir,Excel,verified
+P034,pasalTerbukti,Pasal 114 ayat (2) dan Pasal 119 ayat (2),putusan_34_3.pdf,61,Fahir,Excel,verified
+P035,vonisBulan,66,putusan_35_2.pdf,17,Fahir,Excel,verified
+P035,beratBarangBuktiGram,0.546,putusan_35_2.pdf,17,Fahir,Excel,verified
+P035,pasalTerbukti,Pasal 114 ayat (1),putusan_35_2.pdf,17,Fahir,Excel,verified
+P036,vonisBulan,84,putusan_36.pdf,21,Fahir,Excel,verified
+P036,beratBarangBuktiGram,18.592,putusan_36.pdf,21,Fahir,Excel,verified
+P036,pasalTerbukti,Pasal 114 ayat (2),putusan_36.pdf,21,Fahir,Excel,verified
+P037,vonisBulan,70,putusan_37.pdf,18,Fahir,Excel,verified
+P037,beratBarangBuktiGram,1.221,putusan_37.pdf,19,Fahir,Excel,verified
+P037,pasalTerbukti,Pasal 114 ayat (1),putusan_37.pdf,18,Fahir,Excel,verified
+P038,vonisBulan,90,putusan_38_2.pdf,35,Fahir,Excel,verified
+P038,beratBarangBuktiGram,15.722,putusan_38_2.pdf,5,Fahir,Excel,verified
 P038,pasalTerbukti,Pasal 114 ayat (2),putusan_38_2.pdf,32,Fahir,Excel,verified
-P039,vonisBulan,72,putusan_39.pdf,23,Fahir,Excel,unverified
-P039,beratBarangBuktiGram,1.922,putusan_39.pdf,3,Fahir,Excel,unverified
-P039,pasalTerbukti,Pasal 114 ayat (1),putusan_39.pdf,21,Fahir,Excel,unverified
-P040,vonisBulan,132,putusan_40.pdf,37,Fahir,Excel,unverified
-P040,beratBarangBuktiGram,295.80,putusan_40.pdf,2,Fahir,Excel,unverified
-P040,pasalTerbukti,Pasal 114 ayat (2),putusan_40.pdf,35,Fahir,Excel,unverified
-P041,vonisBulan,96,putusan_41.pdf,19,Fahir,Excel,unverified
-P041,beratBarangBuktiGram,15.479,putusan_41.pdf,3,Fahir,Excel,unverified
-P041,pasalTerbukti,Pasal 114 ayat (2),putusan_41.pdf,17,Fahir,Excel,unverified
-P042,vonisBulan,120,putusan_42.pdf,28,Fahir,Excel,unverified
-P042,beratBarangBuktiGram,143.60,putusan_42.pdf,6,Fahir,Excel,unverified
-P042,pasalTerbukti,Pasal 114 ayat (2),putusan_42.pdf,26,Fahir,Excel,unverified
-P043,vonisBulan,90,putusan_43.pdf,21,Fahir,Excel,unverified
-P043,beratBarangBuktiGram,10.790,putusan_43.pdf,3,Fahir,Excel,unverified
-P043,pasalTerbukti,Pasal 114 ayat (2),putusan_43.pdf,19,Fahir,Excel,unverified
-P044,vonisBulan,72,putusan_44.pdf,19,Fahir,Excel,unverified
-P044,beratBarangBuktiGram,6.677,putusan_44.pdf,2,Fahir,Excel,unverified
-P044,pasalTerbukti,Pasal 114 ayat (1),putusan_44.pdf,17,Fahir,Excel,unverified
-P045,vonisBulan,120,putusan_45.pdf,20,Fahir,Excel,unverified
-P045,beratBarangBuktiGram,97.90,putusan_45.pdf,2,Fahir,Excel,unverified
-P045,pasalTerbukti,Pasal 114 ayat (2),putusan_45.pdf,18,Fahir,Excel,unverified
-P046,vonisBulan,72,putusan_46.pdf,29,Fahir,Excel,unverified
-P046,beratBarangBuktiGram,240.55,putusan_46.pdf,6,Fahir,Excel,unverified
-P046,pasalTerbukti,Pasal 131,putusan_46.pdf,29,Fahir,Excel,unverified
-P047,vonisBulan,66,putusan_47.pdf,23,Fahir,Excel,unverified
-P047,beratBarangBuktiGram,6.505,putusan_47.pdf,15,Fahir,Excel,unverified
-P047,pasalTerbukti,Pasal 114 ayat (2),putusan_47.pdf,22,Fahir,Excel,unverified
-P048,vonisBulan,72,putusan_48.pdf,18,Fahir,Excel,unverified
-P048,beratBarangBuktiGram,2.389,putusan_48.pdf,19,Fahir,Excel,unverified
-P048,pasalTerbukti,Pasal 114 ayat (1),putusan_48.pdf,18,Fahir,Excel,unverified
-P049,vonisBulan,132,putusan_49.pdf,31,Fahir,Excel,unverified
-P049,beratBarangBuktiGram,240.55,putusan_49.pdf,6,Fahir,Excel,unverified
-P049,pasalTerbukti,Pasal 114 ayat (2),putusan_49.pdf,30,Fahir,Excel,unverified
-P050,vonisBulan,78,putusan_50.pdf,17,Fahir,Excel,unverified
-P050,beratBarangBuktiGram,4.359,putusan_50.pdf,18,Fahir,Excel,unverified
-P050,pasalTerbukti,Pasal 114 ayat (1),putusan_50.pdf,17,Fahir,Excel,unverified
+P039,vonisBulan,72,putusan_39.pdf,23,Fahir,Excel,verified
+P039,beratBarangBuktiGram,1.922,putusan_39.pdf,3,Fahir,Excel,verified
+P039,pasalTerbukti,Pasal 114 ayat (1),putusan_39.pdf,21,Fahir,Excel,verified
+P040,vonisBulan,132,putusan_40.pdf,37,Fahir,Excel,verified
+P040,beratBarangBuktiGram,295.80,putusan_40.pdf,2,Fahir,Excel,verified
+P040,pasalTerbukti,Pasal 114 ayat (2),putusan_40.pdf,35,Fahir,Excel,verified
+P041,vonisBulan,96,putusan_41.pdf,19,Fahir,Excel,verified
+P041,beratBarangBuktiGram,15.479,putusan_41.pdf,3,Fahir,Excel,verified
+P041,pasalTerbukti,Pasal 114 ayat (2),putusan_41.pdf,17,Fahir,Excel,verified
+P042,vonisBulan,120,putusan_42.pdf,28,Fahir,Excel,verified
+P042,beratBarangBuktiGram,143.60,putusan_42.pdf,6,Fahir,Excel,verified
+P042,pasalTerbukti,Pasal 114 ayat (2),putusan_42.pdf,26,Fahir,Excel,verified
+P043,vonisBulan,90,putusan_43.pdf,21,Fahir,Excel,verified
+P043,beratBarangBuktiGram,10.790,putusan_43.pdf,3,Fahir,Excel,verified
+P043,pasalTerbukti,Pasal 114 ayat (2),putusan_43.pdf,19,Fahir,Excel,verified
+P044,vonisBulan,72,putusan_44.pdf,19,Fahir,Excel,verified
+P044,beratBarangBuktiGram,6.677,putusan_44.pdf,2,Fahir,Excel,verified
+P044,pasalTerbukti,Pasal 114 ayat (1),putusan_44.pdf,17,Fahir,Excel,verified
+P045,vonisBulan,120,putusan_45.pdf,20,Fahir,Excel,verified
+P045,beratBarangBuktiGram,97.90,putusan_45.pdf,2,Fahir,Excel,verified
+P045,pasalTerbukti,Pasal 114 ayat (2),putusan_45.pdf,18,Fahir,Excel,verified
+P046,vonisBulan,72,putusan_46.pdf,29,Fahir,Excel,verified
+P046,beratBarangBuktiGram,240.55,putusan_46.pdf,6,Fahir,Excel,verified
+P046,pasalTerbukti,Pasal 131,putusan_46.pdf,29,Fahir,Excel,verified
+P047,vonisBulan,66,putusan_47.pdf,23,Fahir,Excel,verified
+P047,beratBarangBuktiGram,6.505,putusan_47.pdf,15,Fahir,Excel,verified
+P047,pasalTerbukti,Pasal 114 ayat (2),putusan_47.pdf,22,Fahir,Excel,verified
+P048,vonisBulan,72,putusan_48.pdf,18,Fahir,Excel,verified
+P048,beratBarangBuktiGram,2.389,putusan_48.pdf,19,Fahir,Excel,verified
+P048,pasalTerbukti,Pasal 114 ayat (1),putusan_48.pdf,18,Fahir,Excel,verified
+P049,vonisBulan,132,putusan_49.pdf,31,Fahir,Excel,verified
+P049,beratBarangBuktiGram,240.55,putusan_49.pdf,6,Fahir,Excel,verified
+P049,pasalTerbukti,Pasal 114 ayat (2),putusan_49.pdf,30,Fahir,Excel,verified
+P050,vonisBulan,78,putusan_50.pdf,17,Fahir,Excel,verified
+P050,beratBarangBuktiGram,4.359,putusan_50.pdf,18,Fahir,Excel,verified
+P050,pasalTerbukti,Pasal 114 ayat (1),putusan_50.pdf,17,Fahir,Excel,verified
