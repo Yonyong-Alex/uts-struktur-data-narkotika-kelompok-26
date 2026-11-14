@@ -1,5 +1,8 @@
 public class PutusanService {
 
+    // =========================================================================
+    // TAHAP 2: FITUR PENCARIAN & PENGURUTAN (KODE LAMA TETAP DIPERTAHANKAN)
+    // =========================================================================
 
     public static SearchResult cariByCaseId(StrukturData<Putusan> daftarPutusan, String caseId) {
         int langkah = 0;
@@ -18,7 +21,6 @@ public class PutusanService {
         return new SearchResult(null, langkah);
     }
 
-
     public static SearchResult cariByNomorPerkara(StrukturData<Putusan> daftarPutusan, String nomorPerkara) {
         int langkah = 0;
         if (daftarPutusan == null || nomorPerkara == null || nomorPerkara.trim().isEmpty()) {
@@ -35,7 +37,6 @@ public class PutusanService {
         }
         return new SearchResult(null, langkah);
     }
-
 
     public static DynamicArray<Putusan> urutkanBerdasarkanVonis(StrukturData<Putusan> daftarPutusan, boolean ascending) {
         DynamicArray<Putusan> hasilUrut = new DynamicArray<>();
@@ -107,5 +108,113 @@ public class PutusanService {
             j++;
             k++;
         }
+    }
+
+    // =========================================================================
+    // TAHAP 3A: FITUR FILTER (TAMBAHAN BARU)
+    // =========================================================================
+
+    public static DynamicArray<Putusan> filterByJenisNarkotika(StrukturData<Putusan> daftarPutusan, String jenisNarkotika) {
+        DynamicArray<Putusan> hasilFilter = new DynamicArray<>();
+        if (daftarPutusan == null || jenisNarkotika == null || jenisNarkotika.trim().isEmpty()) {
+            return hasilFilter;
+        }
+
+        String keyword = jenisNarkotika.trim().toLowerCase();
+        for (int i = 0; i < daftarPutusan.size(); i++) {
+            Putusan current = daftarPutusan.get(i);
+            if (current != null && current.getJenisNarkotika() != null) {
+                if (current.getJenisNarkotika().toLowerCase().contains(keyword)) {
+                    hasilFilter.add(current);
+                }
+            }
+        }
+        return hasilFilter;
+    }
+
+    public static DynamicArray<Putusan> filterByRentangVonis(StrukturData<Putusan> daftarPutusan, int minBulan, int maxBulan) {
+        DynamicArray<Putusan> hasilFilter = new DynamicArray<>();
+        if (daftarPutusan == null || minBulan > maxBulan) {
+            return hasilFilter;
+        }
+
+        for (int i = 0; i < daftarPutusan.size(); i++) {
+            Putusan current = daftarPutusan.get(i);
+            if (current != null) {
+                int vonis = current.getVonisBulan();
+                if (vonis >= minBulan && vonis <= maxBulan) {
+                    hasilFilter.add(current);
+                }
+            }
+        }
+        return hasilFilter;
+    }
+
+    public static DynamicArray<Putusan> filterKombinasi(StrukturData<Putusan> daftarPutusan,
+                                                        String jenisNarkotika, int minBulan, int maxBulan) {
+        DynamicArray<Putusan> hasilFilter = new DynamicArray<>();
+        if (daftarPutusan == null || minBulan > maxBulan) {
+            return hasilFilter;
+        }
+
+        boolean cekJenis = (jenisNarkotika != null && !jenisNarkotika.trim().isEmpty());
+        String keyword = cekJenis ? jenisNarkotika.trim().toLowerCase() : "";
+
+        for (int i = 0; i < daftarPutusan.size(); i++) {
+            Putusan current = daftarPutusan.get(i);
+            if (current != null) {
+                boolean cocokJenis = !cekJenis ||
+                        (current.getJenisNarkotika() != null && current.getJenisNarkotika().toLowerCase().contains(keyword));
+                int vonis = current.getVonisBulan();
+                boolean cocokVonis = (vonis >= minBulan && vonis <= maxBulan);
+
+                if (cocokJenis && cocokVonis) {
+                    hasilFilter.add(current);
+                }
+            }
+        }
+        return hasilFilter;
+    }
+
+    // =========================================================================
+    // TAHAP 3B: FITUR AGREGASI (TAMBAHAN BARU)
+    // =========================================================================
+
+    public static StatistikPutusan hitungStatistik(StrukturData<Putusan> daftarPutusan, String namaKategori) {
+        if (daftarPutusan == null || daftarPutusan.isEmpty()) {
+            return new StatistikPutusan(namaKategori, 0, 0.0, 0.0, 0.0, 0, 0);
+        }
+
+        int totalPerkara = daftarPutusan.size();
+        long totalVonis = 0;
+        long totalTuntutan = 0;
+        double totalBeratBB = 0.0;
+        int minVonis = Integer.MAX_VALUE;
+        int maxVonis = Integer.MIN_VALUE;
+
+        for (int i = 0; i < totalPerkara; i++) {
+            Putusan p = daftarPutusan.get(i);
+            int vonis = p.getVonisBulan();
+
+            totalVonis += vonis;
+            totalTuntutan += p.getTuntutanBulan();
+            totalBeratBB += p.getBeratBarangBuktiGram();
+
+            if (vonis < minVonis) minVonis = vonis;
+            if (vonis > maxVonis) maxVonis = vonis;
+        }
+
+        double rataVonis = (double) totalVonis / totalPerkara;
+        double rataTuntutan = (double) totalTuntutan / totalPerkara;
+
+        return new StatistikPutusan(
+                namaKategori,
+                totalPerkara,
+                rataVonis,
+                rataTuntutan,
+                totalBeratBB,
+                minVonis,
+                maxVonis
+        );
     }
 }
