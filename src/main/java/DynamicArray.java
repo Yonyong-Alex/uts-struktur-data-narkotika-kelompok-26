@@ -76,4 +76,40 @@ private void checkIndex(int position) {
         throw new IndexOutOfBoundsException("Position: " + position +", Size: " + size);
     }
 }
+    public void set(int position, T value) {
+        checkIndex(position);
+        elements[position] = value;
+    }
+
+    public void insert(int position, T value) {
+        if (position < 0 || position > size) {
+            throw new IndexOutOfBoundsException("Position: " + position + ", Size: " + size);
+        }
+        if (size == elements.length) {
+            grow();
+        }
+        for (int i = size; i > position; i--) {
+            elements[i] = elements[i - 1];
+        }
+        elements[position] = value;
+        size++;
+    }
+
+
+    public boolean validateInvariant() {
+        if (elements == null || size < 0 || size > elements.length) {
+            return false;
+        }
+        for (int i = 0; i < size; i++) {
+            if (elements[i] == null) {
+                return false;
+            }
+        }
+        for (int i = size; i < elements.length; i++) {
+            if (elements[i] != null) {
+                return false;
+            }
+        }
+        return true;
+    }
 }
