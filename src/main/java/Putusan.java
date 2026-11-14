@@ -57,4 +57,11 @@ public class Putusan {
     public String getKeadaanMemberatkan() { return keadaanMemberatkan; }
     public String getKeadaanMeringankan() { return keadaanMeringankan; }
     public String getSourcePages() { return sourcePages; }
+
+    @Override
+    public String toString() {
+        return String.format("[%s] %s | Jenis: %-15s | BB: %.3f gr | Tuntutan: %d bln | Vonis: %d bln | %s",
+                caseId, nomorPerkara, jenisNarkotika, beratBarangBuktiGram,
+                tuntutanBulan, vonisBulan, pasalTerbukti);
+    }
 }
