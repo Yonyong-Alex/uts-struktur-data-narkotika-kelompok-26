@@ -1,0 +1,76 @@
+case_id,field_name,value,source_file,source_page,extractor,reviewer,status
+P001,vonisBulan,78,putusan_narkotika 1.pdf,17,Excel,Fahir,verified
+P001,beratBarangBuktiGram,1.812,putusan_narkotika 1.pdf,2,Excel,Fahir,verified
+P001,pasalTerbukti,Pasal 114 ayat (1),putusan_narkotika 1.pdf,17,Excel,Fahir,verified
+P002,vonisBulan,6,putusan_narkotika 2.pdf,42,Excel,Fahir,verified
+P002,beratBarangBuktiGram,496.95,putusan_narkotika 2.pdf,7,Excel,Fahir,verified
+P002,pasalTerbukti,Pasal 131,putusan_narkotika 2.pdf,42,Excel,Fahir,verified
+P003,vonisBulan,96,putusan_narkotika 3.pdf,41,Excel,Fahir,verified
+P003,beratBarangBuktiGram,496.95,putusan_narkotika 3.pdf,2,Excel,Fahir,verified
+P003,pasalTerbukti,Pasal 114 ayat (2) Jo Pasal 132 ayat (1),putusan_narkotika 3.pdf,41,Excel,Fahir,verified
+P004,vonisBulan,84,putusan_narkotika 4.pdf,37,Excel,Fahir,verified
+P004,beratBarangBuktiGram,19.45,putusan_narkotika 4.pdf,3,Excel,Fahir,verified
+P004,pasalTerbukti,Pasal 114 ayat (2) Jo Pasal 132 Ayat (1),putusan_narkotika 4.pdf,36,Excel,Fahir,verified
+P005,vonisBulan,72,putusan_narkotika 5.pdf,14,Excel,Fahir,verified
+P005,beratBarangBuktiGram,1.772,putusan_narkotika 5.pdf,2,Excel,Fahir,verified
+P005,pasalTerbukti,Pasal 114 Ayat (1),putusan_narkotika 5.pdf,14,Excel,Fahir,unverified
+P006,vonisBulan,66,putusan_narkotika 6.pdf,18,Excel,Fahir,unverified
+P006,beratBarangBuktiGram,0.189,putusan_narkotika 6.pdf,18,Excel,Fahir,unverified
+P006,pasalTerbukti,Pasal 114 ayat (1),putusan_narkotika 6.pdf,18,Excel,Fahir,unverified
+P007,vonisBulan,72,putusan_narkotika 7.pdf,23,Excel,Fahir,unverified
+P007,beratBarangBuktiGram,1.422,putusan_narkotika 7.pdf,2,Excel,Fahir,unverified
+P007,pasalTerbukti,Pasal 114 ayat (1),putusan_narkotika 7.pdf,23,Excel,Fahir,verified
+P008,vonisBulan,84,putusan_narkotika 8.pdf,27,Excel,Fahir,verified
+P008,beratBarangBuktiGram,5.54,putusan_narkotika 8.pdf,27,Excel,Fahir,verified
+P008,pasalTerbukti,Pasal 114 ayat (2),putusan_narkotika 8.pdf,26,Excel,Fahir,verified
+P009,vonisBulan,78,putusan_narkotika 9.pdf,22,Excel,Fahir,verified
+P009,beratBarangBuktiGram,0.841,putusan_narkotika 9.pdf,3,Excel,Fahir,verified
+P009,pasalTerbukti,Pasal 114 ayat (1) jo Pasal 132 Ayat (1),putusan_narkotika 9.pdf,22,Excel,Fahir,verified
+P010,vonisBulan,180,putusan_narkotika 10.pdf,39,Excel,Fahir,verified
+P010,beratBarangBuktiGram,2516.79,putusan_narkotika 10.pdf,39,Excel,Fahir,verified
+P010,pasalTerbukti,Pasal 114 Ayat (2) Jo Pasal 132 ayat (1),putusan_narkotika 10.pdf,39,Excel,Fahir,verified
+P011,vonisBulan,90,putusan_narkotika 11.pdf,22,Excel,Fahir,verified
+P011,beratBarangBuktiGram,9.863,putusan_narkotika 11.pdf,23,Excel,Fahir,verified
+P011,pasalTerbukti,Pasal 114 Ayat (2) UU RI No 35 tahun 2009 Jis Lampiran II UU RI No 1 Tahun 2026,putusan_narkotika 11.pdf,22,Excel,Fahir,verified
+P012,vonisBulan,96,putusan_narkotika 12.pdf,24,Excel,Fahir,unverified
+P012,beratBarangBuktiGram,996.70,putusan_narkotika 12.pdf,25,Excel,Fahir,unverified
+P012,pasalTerbukti,Pasal 114 Ayat (2) Jo Pasal 132 Ayat (1) Undang-Undang Republik Indonesia Nomor 35 tahun 2009 tentang Narkotika,putusan_narkotika 12.pdf,24,Excel,Fahir,unverified
+P013,vonisBulan,72,putusan_narkotika 13.pdf,21,Excel,Fahir,verified
+P013,beratBarangBuktiGram,1.825,putusan_narkotika 13.pdf,11,Excel,Fahir,verified
+P013,pasalTerbukti,Pasal 114 ayat (1) UU No.35 tahun 2009 Tentang Narkotika Juncto UU RI no 1 Tahun 2023 tentang KUHP Juncto UU RI No 1 Tahun 2026 tentang penyesuaian pidana,putusan_narkotika 13.pdf,21,Excel,Fahir,verified
+P014,vonisBulan,72,putusan_narkotika 14.pdf,20,Excel,Fahir,verified
+P014,beratBarangBuktiGram,0.684,putusan_narkotika 14.pdf,20,Excel,Fahir,verified
+P014,pasalTerbukti,Pasal 114 Ayat (1) Undang-Undang Republik Indonesia Nomor 35 Tahun 2009 Tentang Narkotika Jo. Undang-Undang Nomor 1 Tahun 2023 Tentang Kitab Undang-Undang Hukum Pidana Jo. Undang-Undang Nomor 1 Tahun 2026 Tentang Penyesuaian Pidana,putusan_narkotika 14.pdf,20,Excel,Fahir,verified
+P015,vonisBulan,84,putusan_narkotika 15.pdf,39,Excel,Fahir,verified
+P015,beratBarangBuktiGram,9.660,putusan_narkotika 15.pdf,3,Excel,Fahir,verified
+P015,pasalTerbukti,Pasal 114 ayat (2) UU RI No. 35 Tahun 2009 Tentang Narkotika Juncto UU RI No. 1 Tahun 2023 tentang KUHP Juncto UU RI No. 1 Tahun 2026 tentang penyesuaian pidana Jo. Pasal 132 Ayat (1) UU RI No. 35 Tahun 2009,putusan_narkotika 15.pdf,39,Excel,Fahir,verified
+P016,vonisBulan,72,putusan_narkotika 16.pdf,15,Excel,Fahir,verified
+P016,beratBarangBuktiGram,0.720,putusan_narkotika 16.pdf,2,Excel,Fahir,verified
+P016,pasalTerbukti,Pasal 114 Ayat (1) UU RI Nomor 35 Tahun 2009 Tentang Narkotika Jo. Undang-undang No. 1 Tahun 2026 Tentang penyesuaian Pidana,putusan_narkotika 16.pdf,15,Excel,Fahir,verified
+P017,vonisBulan,72,putusan_narkotika 17.pdf,33,Excel,Fahir,verified
+P017,beratBarangBuktiGram,2.833,putusan_narkotika 17.pdf,2,Excel,Fahir,verified
+P017,pasalTerbukti,Pasal 114 ayat (1) UU No. 35 Tahun 2009 tentang Narkotika Jo. Lampiran III UU No. 1 Tahun 2026 tentang Penyesuaian Pidana,putusan_narkotika 17.pdf,32,Excel,Fahir,verified
+P018,vonisBulan,72,putusan_narkotika 18.pdf,21,Excel,Fahir,verified
+P018,beratBarangBuktiGram,2.226,putusan_narkotika 18.pdf,21,Excel,Fahir,verified
+P018,pasalTerbukti,Pasal 114 ayat (1) Undang-undang Nomor 35 tahun 2009 tentang Narkotika,putusan_narkotika 18.pdf,21,Excel,Fahir,verified
+P019,vonisBulan,102,putusan_narkotika 19.pdf,19,Excel,Fahir,verified
+P019,beratBarangBuktiGram,67.23,putusan_narkotika 19.pdf,2,Excel,Fahir,verified
+P019,pasalTerbukti,Pasal 114 ayat (2) Undang-Undang Nomor 35 Tahun 2009 Tentang Narkotika Jo Undang-Undang Nomor 1 Tahun 2023 Tentang KUHP Jo Undang-Undang Nomor 1 Tahun 2026 Tentang Penyesuaian Pidana,putusan_narkotika 19.pdf,19,Excel,Fahir,verified
+P020,vonisBulan,144,putusan_narkotika 20.pdf,28,Excel,Fahir,verified
+P020,beratBarangBuktiGram,325.68,putusan_narkotika 20.pdf,2,Excel,Fahir,verified
+P020,pasalTerbukti,Pasal 114 ayat (2) Jo. Pasal 132 ayat (1) UU RI Nomor 35 Tahun 2009 tentang Narkotika,putusan_narkotika 20.pdf,28,Excel,Fahir,verified
+P021,vonisBulan,78,putusan_narkotika 21.pdf,20,Excel,Fahir,verified
+P021,beratBarangBuktiGram,1.758,putusan_narkotika 21.pdf,4,Excel,Fahir,verified
+P021,pasalTerbukti,Pasal 114 ayat (1) UU No. 35 Tahun 2009 tentang Narkotika Jo. UU No. 1 Tahun 2023 tentang KUHP Jo. UU No. 1 Tahun 2026 tentang Penyesuaian Pidana,putusan_narkotika 21.pdf,18,Excel,Fahir,verified
+P022,vonisBulan,84,putusan_narkotika 22.pdf,25,Excel,Fahir,verified
+P022,beratBarangBuktiGram,5.362,putusan_narkotika 22.pdf,5,Excel,Fahir,verified
+P022,pasalTerbukti,Pasal 114 ayat (2) Jo. Pasal 132 ayat (1) Undang-Undang Nomor 35 Tahun 2009 tentang Narkotika,putusan_narkotika 22.pdf,24,Excel,Fahir,verified
+P023,vonisBulan,240,putusan_narkotika 23.pdf,36,Excel,Fahir,verified
+P023,beratBarangBuktiGram,5546.67,putusan_narkotika 23.pdf,9,Excel,Fahir,verified
+P023,pasalTerbukti,Pasal 114 ayat (2) Jo. Pasal 132 ayat (1) UU RI Nomor 35 Tahun 2009 tentang Narkotika,putusan_narkotika 23.pdf,35,Excel,Fahir,verified
+P024,vonisBulan,60,putusan_narkotika 24.pdf,28,Excel,Fakhir,verified
+P024,beratBarangBuktiGram,8.613,putusan_narkotika 24.pdf,7,Excel,Fakhir,verified
+P024,pasalTerbukti,Pasal 114 ayat (2) Jo. Pasal 132 ayat (1) Undang-Undang Nomor 35 Tahun 2009 tentang Narkotika Jo. Lampiran II Undang-Undang Nomor 1 Tahun 2026,putusan_narkotika 24.pdf,28,Excel,Fakhir,verified
+P025,vonisBulan,240,putusan_narkotika 25.pdf,36,Excel,Fakhir,verified
+P025,beratBarangBuktiGram,5546.67,putusan_narkotika 25.pdf,9,Excel,Fakhir,verified
+P025,pasalTerbukti,Pasal 114 ayat (2) Jo. Pasal 132 ayat (1) UU RI Nomor 35 Tahun 2009 tentang Narkotika,putusan_narkotika 25.pdf,36,Excel,Fakhir,verified
