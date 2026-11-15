@@ -53,17 +53,18 @@ public DynamicArray() {
     return size == 0;
 }
 
-@Override
+    @Override
     public boolean contains(T value) {
-    for (int i = 0; i < size; i++) {
-        if (value == null){
-            if (elements[i] == null) return true;
-    } else{
-        if (value.equals(elements[i])) return true;
-         }
+        if (value == null) {
+            return false;
+        }
+        for (int i = 0; i < size; i++) {
+            if (value.equals(elements[i])) {
+                return true;
+            }
+        }
+        return false;
     }
-    return false;
-}
 @Override
 public void clear() {
     for (int i = 0; i < size; i++) {

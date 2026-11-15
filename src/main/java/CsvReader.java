@@ -4,55 +4,92 @@ import java.io.IOException;
 
 public class CsvReader {
 
-    // Sesuaikan parameter tipenya dengan struktur data buatanmu (misal DynamicArray atau StrukturData)
-    public static void loadPutusanData(DynamicArray<Putusan> targetList) {
-        String filePath = "data/putusan-50.csv";
-        String line = "";
-        // Regex untuk menghindari pemisahan koma yang berada di dalam tanda kutip string CSV
+    public static void loadPutusanData(StrukturData<Putusan> targetList) {
+        loadPutusanData(targetList, "data/putusan-50.csv");
+    }
+
+    public static void loadPutusanData(StrukturData<Putusan> targetList, String filePath) {
+        if (targetList == null) {
+            throw new IllegalArgumentException("Target struktur data tidak boleh null.");
+        }
+
+        String line;
         String csvSplitBy = ",(?=([^\"]*\"[^\"]*\")*[^\"]*$)";
+        int lineNumber = 1;
+        int validCount = 0;
+        int invalidCount = 0;
 
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
-            // Lewati baris pertama jika itu adalah header kolom
+            // Lewati baris header
             String header = br.readLine();
+            if (header == null) {
+                System.err.println("[PERINGATAN] File CSV kosong: " + filePath);
+                return;
+            }
 
             while ((line = br.readLine()) != null) {
-                String[] data = line.split(csvSplitBy);
+                lineNumber++;
+                if (line.trim().isEmpty()) {
+                    invalidCount++;
+                    System.err.println("[TOLAK CSV Baris " + lineNumber + "] Baris kosong dilewati.");
+                    continue;
+                }
 
-                if (data.length >= 16) {
-                    // Membersihkan tanda kutip ganda dan spasi
-                    String caseId = data[0].replace("\"", "").trim();
-                    String nomorPerkara = data[1].replace("\"", "").trim();
-                    String pengadilan = data[2].replace("\"", "").trim();
-                    String tanggalPutusan = data[3].replace("\"", "").trim();
-                    String terdakwaKode = data[4].replace("\"", "").trim();
-                    String jenisNarkotika = data[5].replace("\"", "").trim();
-                    double beratBarangBuktiGram = Double.parseDouble(data[6].replace("\"", "").trim());
-                    String pasalDakwaan = data[7].replace("\"", "").trim();
-                    String pasalTerbukti = data[8].replace("\"", "").trim();
-                    int tuntutanBulan = Integer.parseInt(data[9].replace("\"", "").trim());
-                    int vonisBulan = Integer.parseInt(data[10].replace("\"", "").trim());
-                    long dendaRupiah = Long.parseLong(data[11].replace("\"", "").trim());
-                    String barangBukti = data[12].replace("\"", "").trim();
-                    String keadaanMemberatkan = data[13].replace("\"", "").trim();
-                    String keadaanMeringankan = data[14].replace("\"", "").trim();
-                    String sourcePages = data[15].replace("\"", "").trim();
+                try {
+                    String[] data = line.split(csvSplitBy, -1);
+                    if (data.length < 16) {
+                        throw new IllegalArgumentException("Jumlah kolom kurang dari 16 (ditemukan " + data.length + ").");
+                    }
 
-                    // Buat objek Putusan
+                    String caseId = cleanField(data[0]);
+                    String nomorPerkara = cleanField(data[1]);
+                    String pengadilan = cleanField(data[2]);
+                    String tanggalPutusan = cleanField(data[3]);
+                    String terdakwaKode = cleanField(data[4]);
+                    String jenisNarkotika = cleanField(data[5]);
+                    double beratBarangBuktiGram = Double.parseDouble(cleanField(data[6]));
+                    String pasalDakwaan = cleanField(data[7]);
+                    String pasalTerbukti = cleanField(data[8]);
+                    int tuntutanBulan = Integer.parseInt(cleanField(data[9]));
+                    int vonisBulan = Integer.parseInt(cleanField(data[10]));
+                    long dendaRupiah = Long.parseLong(cleanField(data[11]));
+                    String barangBukti = cleanField(data[12]);
+                    String keadaanMemberatkan = cleanField(data[13]);
+                    String keadaanMeringankan = cleanField(data[14]);
+                    String sourcePages = cleanField(data[15]);
+
+                    if (caseId.isEmpty() || nomorPerkara.isEmpty() || jenisNarkotika.isEmpty()) {
+                        throw new IllegalArgumentException("Field wajib (caseId/nomorPerkara/jenisNarkotika) kosong.");
+                    }
+                    if (beratBarangBuktiGram < 0 || tuntutanBulan < 0 || vonisBulan < 0 || dendaRupiah < 0) {
+                        throw new IllegalArgumentException("Nilai numerik (berat/tuntutan/vonis/denda) tidak boleh negatif.");
+                    }
+
                     Putusan putusan = new Putusan(caseId, nomorPerkara, pengadilan, tanggalPutusan,
                             terdakwaKode, jenisNarkotika, beratBarangBuktiGram, pasalDakwaan,
                             pasalTerbukti, tuntutanBulan, vonisBulan, dendaRupiah, barangBukti,
                             keadaanMemberatkan, keadaanMeringankan, sourcePages);
 
-                    // Masukkan ke struktur data utama buatanmu
                     targetList.add(putusan);
+                    validCount++;
+                } catch (NumberFormatException e) {
+                    invalidCount++;
+                    System.err.println("[TOLAK CSV Baris " + lineNumber + "] Format angka tidak valid: " + e.getMessage());
+                } catch (IllegalArgumentException e) {
+                    invalidCount++;
+                    System.err.println("[TOLAK CSV Baris " + lineNumber + "] Data tidak valid: " + e.getMessage());
                 }
             }
-            System.out.println("Berhasil memuat 50 data putusan ke dalam struktur data!");
+
+            System.out.println("Berhasil memuat " + validCount + " data putusan ke dalam struktur data"
+                    + (invalidCount > 0 ? " (" + invalidCount + " record tidak valid ditolak)." : "!"));
 
         } catch (IOException e) {
             System.err.println("Gagal membaca file CSV: " + e.getMessage());
-        } catch (NumberFormatException e) {
-            System.err.println("Kesalahan format angka/parse: " + e.getMessage());
         }
+    }
+
+    private static String cleanField(String raw) {
+        return raw == null ? "" : raw.replace("\"", "").trim();
     }
 }
