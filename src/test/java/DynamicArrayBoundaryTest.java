@@ -1,10 +1,12 @@
-public class DynamicArrayBoundaryTest {
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 
+public class DynamicArrayBoundaryTest {
 
     private static int totalTest = 0;
     private static int testLulus = 0;
     private static int testGagal = 0;
-
 
     public static void main(String[] args) {
         System.out.println("=================================================================");
@@ -17,6 +19,10 @@ public class DynamicArrayBoundaryTest {
         testHapusAwalTengahAkhirDanPergeseran();
         testBoundaryInsertDanTambahKembali3Record();
         testBoundaryPencarianDanPengurutanNonDestruktif();
+        testTolakNull();
+        testCariInputKosong();
+        testBoundaryKapasitasGrow();
+        testTolakRecordCsvTidakValid();
 
         System.out.println("\n=================================================================");
         System.out.printf("RINGKASAN HASIL TEST: Total = %d | LULUS = %d | GAGAL = %d%n",
@@ -349,6 +355,47 @@ public class DynamicArrayBoundaryTest {
             assertTrue(daftar.validateInvariant(), "Invariant true setelah grow() dari " + target);
             assertEquals("K-" + target, daftar.get(target - 1).getCaseId(),
                     "Elemen sebelum grow() harus tetap utuh");
+        }
+    }
+
+    // Skenario 4.1 #7: Memasukkan record CSV tidak valid, menampilkan error, dan menjaga konsistensi invariant
+    private static void testTolakRecordCsvTidakValid() {
+        System.out.println("\n[TEST 10] Penolakan Record CSV Tidak Valid & Konsistensi Invariant");
+        File tempCsv = new File("temp_invalid_putusan_test.csv");
+        try (FileWriter writer = new FileWriter(tempCsv)) {
+            writer.write("caseId,nomorPerkara,pengadilan,tanggalPutusan,terdakwaKode,jenisNarkotika,"
+                    + "beratBarangBuktiGram,pasalDakwaan,pasalTerbukti,tuntutanBulan,vonisBulan,"
+                    + "dendaRupiah,barangBukti,keadaanMemberatkan,keadaanMeringankan,sourcePages\n");
+            // Baris valid 1
+            writer.write("P-VAL-1,10/Pid.Sus/2026/PN Plg,PN Palembang,2026-10-01,TDK-1,Sabu,1.250,"
+                    + "Pasal 112 (1),Pasal 112 (1),60,48,800000000,1 klip sabu,Memberatkan,Meringankan,1-3\n");
+            // Baris invalid 1: vonisBulan bukan angka ("BUKAN_ANGKA")
+            writer.write("P-ERR-1,11/Pid.Sus/2026/PN Plg,PN Palembang,2026-10-02,TDK-2,Sabu,2.000,"
+                    + "Pasal 112 (1),Pasal 112 (1),60,BUKAN_ANGKA,800000000,1 klip sabu,Memberatkan,Meringankan,1-3\n");
+            // Baris invalid 2: kolom kurang dari 16
+            writer.write("P-ERR-2,12/Pid.Sus/2026/PN Plg,PN Palembang,kolom_kurang\n");
+            // Baris invalid 3: berat barang bukti negatif (-3.5)
+            writer.write("P-ERR-3,13/Pid.Sus/2026/PN Plg,PN Palembang,2026-10-03,TDK-3,Ganja,-3.500,"
+                    + "Pasal 111 (1),Pasal 111 (1),60,48,800000000,1 paket ganja,Memberatkan,Meringankan,1-3\n");
+            // Baris valid 2 (program harus tetap lanjut membaca baris ini setelah menolak 3 baris rusak)
+            writer.write("P-VAL-2,14/Pid.Sus/2026/PN Plg,PN Palembang,2026-10-04,TDK-4,Ekstasi,3.100,"
+                    + "Pasal 114 (1),Pasal 114 (1),84,72,1000000000,5 butir ekstasi,Memberatkan,Meringankan,1-4\n");
+        } catch (IOException e) {
+            throw new RuntimeException("Gagal membuat file CSV sementara untuk pengujian: " + e.getMessage());
+        }
+
+        try {
+            DynamicArray<Putusan> daftar = new DynamicArray<>();
+            CsvReader.loadPutusanData(daftar, tempCsv.getPath());
+
+            assertEquals(2, daftar.size(), "Hanya 2 record valid yang boleh masuk (3 record tidak valid ditolak)");
+            assertEquals("P-VAL-1", daftar.get(0).getCaseId(), "Record pertama harus P-VAL-1");
+            assertEquals("P-VAL-2", daftar.get(1).getCaseId(), "Record kedua harus P-VAL-2 setelah melewati record rusak");
+            assertTrue(daftar.validateInvariant(), "Invariant harus tetap true setelah menolak record tidak valid");
+        } finally {
+            if (tempCsv.exists()) {
+                tempCsv.delete();
+            }
         }
     }
 }
