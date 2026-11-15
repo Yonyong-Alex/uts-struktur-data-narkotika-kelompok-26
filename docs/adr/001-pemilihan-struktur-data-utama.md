@@ -27,3 +27,5 @@ Jaminan Konsistensi Struktur (`validateInvariant()`):
 - Kapasitas array selalu lebih besar atau sama dengan jumlah elemen aktif (`elements.length >= size` dan `size >= 0`).
 - Seluruh indeks aktif 0 sampai `size - 1` terisi objek putusan (tidak null), sedangkan sisa slot kosong dari `size` sampai `elements.length - 1` selalu bernilai null.
 - Akses indeks di luar batas (`position < 0` atau `position >= size`) selalu ditolak dengan `IndexOutOfBoundsException`.
+- Kapasitas awal tetap 10 (konstanta `DEFAULT_CAPACITY`) dan tidak dapat diatur dari luar, sehingga kapasitas 0 atau negatif tidak mungkin terjadi.
+- `add(null)`, `set(position, null)`, dan `insert(position, null)` melempar `IllegalArgumentException`.

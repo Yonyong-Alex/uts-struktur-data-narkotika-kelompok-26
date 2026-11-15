@@ -1,8 +1,10 @@
 public class DynamicArrayBoundaryTest {
 
+
     private static int totalTest = 0;
     private static int testLulus = 0;
     private static int testGagal = 0;
+
 
     public static void main(String[] args) {
         System.out.println("=================================================================");
@@ -287,6 +289,66 @@ public class DynamicArrayBoundaryTest {
         } else {
             testGagal++;
             System.err.println("  [FAIL] " + pesan);
+        }
+    }
+
+    // Skenario: penolakan input null (R28, R43)
+    private static void testTolakNull() {
+        System.out.println("\n[TEST 7] Penolakan Input Null pada add, set, insert");
+        DynamicArray<Putusan> daftar = new DynamicArray<>();
+        CsvReader.loadPutusanData(daftar);
+
+        boolean addNull = false;
+        try { daftar.add(null); } catch (IllegalArgumentException e) { addNull = true; }
+        assertTrue(addNull, "add(null) harus melempar IllegalArgumentException");
+
+        boolean setNull = false;
+        try { daftar.set(0, null); } catch (IllegalArgumentException e) { setNull = true; }
+        assertTrue(setNull, "set(0, null) harus melempar IllegalArgumentException");
+
+        boolean insertNull = false;
+        try { daftar.insert(0, null); } catch (IllegalArgumentException e) { insertNull = true; }
+        assertTrue(insertNull, "insert(0, null) harus melempar IllegalArgumentException");
+
+        assertEquals(50, daftar.size(), "Size tidak boleh berubah setelah input null ditolak");
+        assertTrue(daftar.validateInvariant(), "Invariant tetap true");
+    }
+
+    // Skenario: pencarian dengan input null atau kosong (R17)
+    private static void testCariInputKosong() {
+        System.out.println("\n[TEST 8] Pencarian dengan Input Null atau Kosong");
+        DynamicArray<Putusan> daftar = new DynamicArray<>();
+        CsvReader.loadPutusanData(daftar);
+
+        SearchResult r1 = PutusanService.cariByCaseId(daftar, null);
+        assertTrue(!r1.isFound(), "caseId null tidak boleh ditemukan");
+        assertEquals(0, r1.getJumlahLangkah(), "caseId null harus 0 langkah");
+
+        SearchResult r2 = PutusanService.cariByNomorPerkara(daftar, "   ");
+        assertTrue(!r2.isFound(), "nomorPerkara kosong tidak boleh ditemukan");
+        assertEquals(0, r2.getJumlahLangkah(), "nomorPerkara kosong harus 0 langkah");
+    }
+
+    // Skenario: boundary grow() pada size 10, 20, dan 40 (R16)
+    private static void testBoundaryKapasitasGrow() {
+        System.out.println("\n[TEST 9] Boundary grow() pada size 10, 20, 40");
+        DynamicArray<Putusan> daftar = new DynamicArray<>();
+        int n = 0;
+        int[] titikPenuh = {10, 20, 40};
+        for (int target : titikPenuh) {
+            while (n < target) {
+                n++;
+                daftar.add(buatDummyPutusan("K-" + n, "K/" + n + "/Pid.Sus/2026/PN Plg", 12));
+            }
+            assertEquals(target, daftar.size(), "Size harus " + target + " (array tepat penuh)");
+            assertTrue(daftar.validateInvariant(), "Invariant true saat tepat penuh di " + target);
+
+            n++;
+            daftar.add(buatDummyPutusan("K-" + n, "K/" + n + "/Pid.Sus/2026/PN Plg", 12));
+            assertEquals(target + 1, daftar.size(), "Size harus " + (target + 1) + " setelah grow()");
+            assertTrue(daftar.validateInvariant(), "Invariant true setelah grow() dari " + target);
+            assertEquals("K-" + target, daftar.get(target - 1).getCaseId(),
+                    "Elemen sebelum grow() harus tetap utuh");
         }
     }
 }

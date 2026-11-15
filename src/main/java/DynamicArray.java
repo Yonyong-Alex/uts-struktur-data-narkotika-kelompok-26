@@ -7,14 +7,21 @@ public DynamicArray() {
     this.elements = new Object[DEFAULT_CAPACITY];
     this.size = 0;
 }
-@Override
-    public void add(T value) {
-    if (size == elements.length) {
-        grow();
+    private void requireNonNull(T value) {
+        if (value == null) {
+            throw new IllegalArgumentException("Nilai tidak boleh null");
+        }
     }
-    elements[size] = value;
-    size++;
-}
+
+    @Override
+    public void add(T value) {
+        requireNonNull(value);          // baris baru, sebelum cek kapasitas
+        if (size == elements.length) {
+            grow();
+        }
+        elements[size] = value;
+        size++;
+    }
 @SuppressWarnings("unchecked")
     @Override
     public T get(int position) {
@@ -78,6 +85,7 @@ private void checkIndex(int position) {
 }
     public void set(int position, T value) {
         checkIndex(position);
+        requireNonNull(value);          // baris baru
         elements[position] = value;
     }
 
@@ -85,6 +93,7 @@ private void checkIndex(int position) {
         if (position < 0 || position > size) {
             throw new IndexOutOfBoundsException("Position: " + position + ", Size: " + size);
         }
+        requireNonNull(value);          // baris baru
         if (size == elements.length) {
             grow();
         }
@@ -94,6 +103,9 @@ private void checkIndex(int position) {
         elements[position] = value;
         size++;
     }
+
+
+
 
 
     public boolean validateInvariant() {

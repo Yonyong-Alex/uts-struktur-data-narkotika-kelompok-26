@@ -1,4 +1,4 @@
-public class Putusan {
+public final class Putusan {
     private String caseId;
     private String nomorPerkara;
     private String pengadilan;

@@ -17,6 +17,8 @@ Aplikasi wajib menyediakan fitur pencarian putusan berdasarkan `caseId` atau `no
 
 ## Konsekuensi dan Analisis Kompleksitas
 Pencarian (Linear Search):
+- Jika `caseId` atau `nomorPerkara` bernilai null atau hanya spasi, pencarian langsung mengembalikan `SearchResult` dengan `putusan = null` dan `jumlahLangkah = 0`.
+- Jika data tidak ditemukan setelah seluruh array diperiksa, `jumlahLangkah = size()`.
 - Best Case: O(1), yaitu 1 langkah apabila data berada pada indeks 0 (contoh: P001).
 - Worst Case: O(n), yaitu 50 langkah apabila data berada pada indeks terakhir (contoh: P050) atau tidak ditemukan di dalam daftar.
 - Tidak mengubah susunan indeks maupun merusak konsistensi struktur data utama.
