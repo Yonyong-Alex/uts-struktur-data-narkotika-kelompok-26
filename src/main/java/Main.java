@@ -70,30 +70,112 @@ public class Main {
             System.out.println("  - " + filterVonisRingan.get(i));
         }
 
-        // 3. Uji Agregasi Statistik
-        System.out.println("\n=== UJI AGREGASI STATISTIK ===");
+        // 3. Uji Filter Tambahan 1: Rentang Berat Barang Bukti (misal: >= 5.0 gram s.d. 100.0 gram)
+        System.out.println("\n=== UJI FILTER RENTANG BERAT BARANG BUKTI (5.0 - 100.0 GRAM) ===");
+        DynamicArray<Putusan> filterBeratBesar = PutusanService.filterByRentangBerat(daftarPutusan, 5.0, 100.0);
+        System.out.println("Jumlah perkara BB 5-100 gr    : " + filterBeratBesar.size());
+        System.out.println("Invariant hasil filter berat  : " + filterBeratBesar.validateInvariant());
+        for (int i = 0; i < Math.min(3, filterBeratBesar.size()); i++) {
+            System.out.println("  - " + filterBeratBesar.get(i));
+        }
+
+        // 4. Uji Filter Tambahan 2: Pasal Terbukti (misal: Pasal 114)
+        System.out.println("\n=== UJI FILTER PASAL TERBUKTI (PASAL 114) ===");
+        DynamicArray<Putusan> filterPasal114 = PutusanService.filterByPasalTerbukti(daftarPutusan, "114");
+        System.out.println("Jumlah perkara Pasal 114      : " + filterPasal114.size());
+        System.out.println("Invariant hasil filter pasal  : " + filterPasal114.validateInvariant());
+        for (int i = 0; i < Math.min(3, filterPasal114.size()); i++) {
+            System.out.println("  - " + filterPasal114.get(i));
+        }
+
+        // 5. Uji Agregasi Statistik (termasuk Total Denda & Distribusi Jenis Narkotika)
+        System.out.println("\n=== UJI AGREGASI STATISTIK LENGKAP ===");
         StatistikPutusan statSemua = PutusanService.hitungStatistik(daftarPutusan, "Semua Perkara (50)");
         StatistikPutusan statSabu = PutusanService.hitungStatistik(filterSabu, "Narkotika Sabu");
         StatistikPutusan statEkstasi = PutusanService.hitungStatistik(
                 PutusanService.filterByJenisNarkotika(daftarPutusan, "Ekstasi"), "Narkotika Ekstasi");
         StatistikPutusan statGanja = PutusanService.hitungStatistik(
                 PutusanService.filterByJenisNarkotika(daftarPutusan, "Ganja"), "Narkotika Ganja");
+        StatistikPutusan statPasal114 = PutusanService.hitungStatistik(filterPasal114, "Terbukti Pasal 114");
 
         System.out.println(statSemua);
         System.out.println(statSabu);
         System.out.println(statEkstasi);
         System.out.println(statGanja);
+        System.out.println(statPasal114);
 
-        // 4. Uji Ekspor Hasil ke CSV & TXT
+        // 6. Uji Ekspor Hasil ke CSV & TXT
         System.out.println("\n=== UJI EKSPOR HASIL FILTER & AGREGASI ===");
         ReportExporter.exportToCsv(filterSabu, "output/hasil_filter_sabu.csv");
         ReportExporter.exportLaporanToTxt(filterVonisRingan,
                 PutusanService.hitungStatistik(filterVonisRingan, "Vonis 1-24 Bulan"),
                 "output/laporan_vonis_ringan.txt");
         ReportExporter.exportLaporanToTxt(daftarPutusan, statSemua, "output/laporan_agregasi_keseluruhan.txt");
+        ReportExporter.exportLaporanToTxt(filterPasal114, statPasal114, "output/laporan_pasal_114.txt");
+
+        // =====================================================================
+        // PENGUJIAN TAHAP 4: REKAM JEJAK AUDIT (STACK) & PENCARIAN NON-DESTRUKTIF
+        // =====================================================================
+        System.out.println("\n=== UJI AUDIT STACK & PENCARIAN NON-DESTRUKTIF ===");
+        AuditStack<AuditLog> auditStack = new AuditStack<>();
+
+        // Simulasi operasi TAMBAH menggunakan Putusan baru
+        Putusan putusanSimulasi = new Putusan(
+                "P051",
+                "999/Pid.Sus/2026/PN Mlg",
+                "PN Malang",
+                "2026-10-15",
+                "TDW-051",
+                "Sabu",
+                2.50,
+                "Pasal 114 ayat (1) UU Narkotika",
+                "Pasal 112 ayat (1) UU Narkotika",
+                60,
+                48,
+                800000000L,
+                "1 klip plastik narkotika jenis sabu berat netto 2,50 gram",
+                "Perbuatan terdakwa bertentangan dengan program pemerintah",
+                "Terdakwa belum pernah dihukum dan bersikap sopan",
+                "hal. 1-18"
+        );
+
+        PutusanService.tambahPutusanDenganAudit(daftarPutusan, auditStack, putusanSimulasi);
+        System.out.println("Setelah TAMBAH P051 -> Ukuran data: " + daftarPutusan.size()
+                + ", Ukuran stack: " + auditStack.size());
+
+        // Simulasi operasi HAPUS pada record terakhir (indeks ke-50 / P051) agar dataset kembali 50
+        Putusan terhapus = PutusanService.hapusPutusanDenganAudit(daftarPutusan, auditStack, daftarPutusan.size() - 1);
+        System.out.println("Setelah HAPUS " + (terhapus != null ? terhapus.getCaseId() : "null")
+                + " -> Ukuran data: " + daftarPutusan.size() + ", Ukuran stack: " + auditStack.size());
+
+        // Uji Pencarian Non-Destruktif di dalam AuditStack
+        AuditLog topSebelumCari = auditStack.peek();
+        int ukuranSebelumCari = auditStack.size();
+        DynamicArray<AuditLog> hasilCariAudit = auditStack.cariRiwayatByKeyword("P051");
+
+        System.out.println("Hasil cari non-destruktif 'P051' : " + hasilCariAudit.size() + " log ditemukan");
+        for (int i = 0; i < hasilCariAudit.size(); i++) {
+            System.out.println("  -> " + hasilCariAudit.get(i));
+        }
+        System.out.println("Verifikasi Stack setelah cari    : Ukuran tetap " + auditStack.size()
+                + " (sebelum: " + ukuranSebelumCari + "), Top tetap: "
+                + (auditStack.peek() != null && auditStack.peek().equals(topSebelumCari)));
+        System.out.println("Invariant AuditStack             : " + auditStack.validateInvariant());
+        auditStack.tampilkanRiwayat();
+
+        // =====================================================================
+        // SKENARIO #5: ANALISIS KOMPARATIF REHABILITASI (PASAL 127) VS PENGEDAR (PASAL 114)
+        // =====================================================================
+        System.out.println("\n=== SKENARIO #5: KOMPARASI PASAL 127 (PENYALAH GUNA) VS PASAL 114 (PENGEDAR) ===");
+        DynamicArray<Putusan> perkaraPasal127 = PutusanService.filterByPasalTerbukti(daftarPutusan, "127");
+        StatistikPutusan statPasal127 = PutusanService.hitungStatistik(perkaraPasal127, "Terbukti Pasal 127");
+
+        System.out.println(statPasal127);
+        System.out.println(statPasal114);
+        ReportExporter.exportLaporanToTxt(perkaraPasal127, statPasal127, "output/skenario5_pasal_127.txt");
 
         // Pastikan struktur data utama tetap utuh dan invariant valid
-        System.out.println("\n=== VERIFIKASI AKHIR STRUKTUR UTAMA (TAHAP 3) ===");
+        System.out.println("\n=== VERIFIKASI AKHIR STRUKTUR UTAMA ===");
         System.out.println("Ukuran akhir daftarPutusan : " + daftarPutusan.size());
         System.out.println("Invariant akhir            : " + daftarPutusan.validateInvariant());
     }
