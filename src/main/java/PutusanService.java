@@ -216,5 +216,34 @@ public class PutusanService {
                 minVonis,
                 maxVonis
         );
+<<<<<<< Updated upstream
+=======
+
+    }
+
+    // =========================================================================
+    // TAHAP 4: OPERASI DATA DENGAN REKAM JEJAK AUDIT (STACK)
+    // =========================================================================
+
+    public static void tambahPutusanDenganAudit(StrukturData<Putusan> daftarPutusan,
+                                                AuditStack<AuditLog> auditStack, Putusan putusanBaru) {
+        if (daftarPutusan == null || putusanBaru == null) return;
+
+        daftarPutusan.add(putusanBaru);
+        if (auditStack != null) {
+            auditStack.push(new AuditLog("TAMBAH", putusanBaru.getCaseId(), putusanBaru.getNomorPerkara()));
+        }
+    }
+
+    public static Putusan hapusPutusanDenganAudit(StrukturData<Putusan> daftarPutusan,
+                                                  AuditStack<AuditLog> auditStack, int position) {
+        if (daftarPutusan == null) return null;
+
+        Putusan terhapus = daftarPutusan.remove(position);
+        if (terhapus != null && auditStack != null) {
+            auditStack.push(new AuditLog("HAPUS", terhapus.getCaseId(), terhapus.getNomorPerkara()));
+        }
+        return terhapus;
+>>>>>>> Stashed changes
     }
 }
