@@ -34,7 +34,7 @@ Dokumen ini mencatat pembagian tugas keseluruhan (ekstraksi data, struktur data,
 ## Detail Kontribusi dan Tautan Bukti GitHub
 
 ### 1. Muhammad Excel (@Yonyong-Alex)
-- **Daftar Semua Issue:** https://github.com/Yonyong-Alex/uts-struktur-data-narkotika-kelompok-26/issues
+- **Daftar Semua Issue:** (https://github.com/Yonyong-Alex/uts-struktur-data-narkotika-kelompok-26/issues?q=is%3Aissue+state%3Aclosed)
 - **Issue Tugas Excel:** https://github.com/Yonyong-Alex/uts-struktur-data-narkotika-kelompok-26/issues/3 (sesuaikan nomor issue jika berbeda)
 - **Pull Request Utama (Hardening CSV, Unit Test, dan Docs):** https://github.com/Yonyong-Alex/uts-struktur-data-narkotika-kelompok-26/pull/16
 - **Daftar Semua PR Excel:** https://github.com/Yonyong-Alex/uts-struktur-data-narkotika-kelompok-26/pulls?q=is%3Apr+author%3AYonyong-Alex
