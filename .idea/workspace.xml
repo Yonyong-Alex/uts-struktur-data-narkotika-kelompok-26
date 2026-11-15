@@ -4,83 +4,61 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="20a46f07-76be-4054-b968-6fe5edade8c2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/docs/adr/001-pemilihan-struktur-data-utama.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/adr/002-strategi-pencarian-dan-pengurutan.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/DynamicArrayBoundaryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uts-struktur-data-narkotika-kelompok-26.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uts-struktur-data-narkotika-kelompok-26.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="fitur-struktur-data" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;Yonyong-Alex&quot;
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Yonyong-Alex"
   }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Yonyong-Alex/uts-struktur-data-narkotika-kelompok-26.git&quot;,
-    &quot;accountId&quot;: &quot;110a713a-333c-4c43-b49c-7e24b0bf1b06&quot;
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Yonyong-Alex/uts-struktur-data-narkotika-kelompok-26.git",
+    "accountId": "110a713a-333c-4c43-b49c-7e24b0bf1b06"
   }
-}</component>
-  <component name="ProblemsViewState">
-    <option name="autoscrollToSource" value="true" />
-    <option name="selectedTabId" value="CurrentFile" />
-    <option name="showPreview" value="true" />
-  </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 7
-}</component>
-  <component name="ProjectId" id="3LhLqVoYeGyfBn8spGfjYwgBVNl" />
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 0
+}]]></component>
+  <component name="ProjectId" id="3M7Ur3qgqrrPYH7duPvqlumrJdV" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Application.DynamicArrayBoundaryTest.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "database.data.extractors.current.export.id": "CSV-Groovy.csv.groovy",
-    "database.data.extractors.current.id": "CSV-Groovy.csv.groovy",
-    "git-widget-placeholder": "fitur-struktur-inti",
+    "git-widget-placeholder": "fitur-pengujian-dan-adr",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/HP/OneDrive/Documents/GitHub/uts-struktur-data-narkotika-kelompok-26/data",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "vcs.Git",
     "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\HP\OneDrive\Documents\GitHub\uts-struktur-data-narkotika-kelompok-26\data" />
-    </key>
-  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -91,53 +69,16 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="5fb8d843-0645-4151-9b2d-51f9fd764be4" name="Changes" comment="" />
-      <created>1793901543670</created>
+      <changelist id="20a46f07-76be-4054-b968-6fe5edade8c2" name="Changes" comment="" />
+      <created>1794701301363</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1793901543670</updated>
-      <workItem from="1793901545133" duration="4372000" />
-      <workItem from="1794039676050" duration="4952000" />
-      <workItem from="1794044707999" duration="19000" />
-      <workItem from="1794044749647" duration="14000" />
-      <workItem from="1794044787586" duration="10373000" />
-      <workItem from="1794068194809" duration="5575000" />
+      <updated>1794701301363</updated>
+      <workItem from="1794701309265" duration="642000" />
     </task>
-    <task id="LOCAL-00001" summary="Menambahkan struktur folder dan template file wajib UTS">
-      <option name="closed" value="true" />
-      <created>1793904193540</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1793904193541</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Menambahkan struktur folder dan template file wajib UTS">
-      <option name="closed" value="true" />
-      <created>1794045193812</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1794045193812</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Menambahkan struktur folder dan template file wajib UTS" />
-
   </component>
 </project>
