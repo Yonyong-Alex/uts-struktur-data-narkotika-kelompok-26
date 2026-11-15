@@ -1,14 +1,10 @@
-<<<<<<< Updated upstream
-# uts-struktur-data-narkotika-kelompok-26
-Repositori Tugas UTS Struktur Data (B)- Kelompok 26
-=======
 # Analisis Data Putusan Perkara Narkotika Menggunakan Struktur Data Kustom (Java)
 
-Repositori ini berisi proyek Ujian Tengah Semester (UTS) Struktur Data **Kelompok 26** yang mengimplementasikan struktur data kustom dari nol (*from scratch*) tanpa menggunakan Java Collection Framework (`ArrayList`, `LinkedList`, `Stack`, `HashMap`, dsb.) untuk mengolah, mencari, mengurutkan, menyaring, menghitung agregasi, dan mencatat riwayat audit 50 data putusan pengadilan perkara narkotika.
+Repositori ini berisi proyek Ujian Tengah Semester (UTS) Struktur Data **Kelompok 26** yang mengimplementasikan struktur data kustom dari nol (*from scratch*) tanpa menggunakan Java Collection Framework (`ArrayList`, `LinkedList`, `Stack`, `HashMap`, dsb.) untuk mengolah, mencari, mengurutkan, menyaring, menghitung agregasi, dan mencatat riwayat audit 50 data putusan pengadilan perkara narkotika[cite: 1].
 
 ## Anggota Kelompok & Pembagian Tugas
-* **Excel (Yonyong-Alex):** Perancangan interface `StrukturData<T>`, implementasi struktur data utama `DynamicArray<T>`, parser `CsvReader`, pengujian *boundary*, dan penyusunan Architecture Decision Record (`docs/adr/`).
-* **Fahir (alimfakhir):** Verifikasi *data provenance* (`docs/data-provenance.csv`), pengembangan fitur Pencarian (*Linear Search*), Pengurutan (*Merge Sort*), Filter, Agregasi Statistik, Ekspor laporan (`.csv` & `.txt`), struktur data sekunder generik `AuditStack<T>`, serta dokumentasi proyek (`README.md` & `AI_USAGE.md`).
+* **Excel (Yonyong-Alex):** Perancangan interface `StrukturData<T>`, implementasi struktur data utama `DynamicArray<T>`, parser `CsvReader`, pengujian *boundary*, dan penyusunan Architecture Decision Record (`docs/adr/`)[cite: 1].
+* **Fahir (alimfakhir):** Verifikasi *data provenance* (`docs/data-provenance.csv`), pengembangan fitur Pencarian (*Linear Search*), Pengurutan (*Merge Sort*), Filter, Agregasi Statistik, Ekspor laporan (`.csv` & `.txt`), struktur data sekunder generik `AuditStack<T>` (termasuk pencarian non-destruktif), serta dokumentasi proyek (`README.md` & `AI_USAGE.md`)[cite: 1].
 
 ---
 
@@ -36,4 +32,3 @@ uts-struktur-data-narkotika-kelompok-26/
 │   └── Main.java               # Titik masuk program & simulasi pengujian seluruh fitur
 ├── AI_USAGE.md                 # Log penggunaan alat bantu AI selama pengembangan
 └── README.md                   # Dokumentasi utama proyek
->>>>>>> Stashed changes

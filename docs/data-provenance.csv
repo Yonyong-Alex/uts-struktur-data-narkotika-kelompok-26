@@ -13,12 +13,12 @@ P004,beratBarangBuktiGram,19.45,putusan_narkotika 4.pdf,3,Excel,Fahir,verified
 P004,pasalTerbukti,Pasal 114 ayat (2) Jo Pasal 132 Ayat (1),putusan_narkotika 4.pdf,36,Excel,Fahir,verified
 P005,vonisBulan,72,putusan_narkotika 5.pdf,14,Excel,Fahir,verified
 P005,beratBarangBuktiGram,1.772,putusan_narkotika 5.pdf,2,Excel,Fahir,verified
-P005,pasalTerbukti,Pasal 114 Ayat (1),putusan_narkotika 5.pdf,14,Excel,Fahir,unverified
-P006,vonisBulan,66,putusan_narkotika 6.pdf,18,Excel,Fahir,unverified
-P006,beratBarangBuktiGram,0.189,putusan_narkotika 6.pdf,18,Excel,Fahir,unverified
-P006,pasalTerbukti,Pasal 114 ayat (1),putusan_narkotika 6.pdf,18,Excel,Fahir,unverified
-P007,vonisBulan,72,putusan_narkotika 7.pdf,23,Excel,Fahir,unverified
-P007,beratBarangBuktiGram,1.422,putusan_narkotika 7.pdf,2,Excel,Fahir,unverified
+P005,pasalTerbukti,Pasal 114 Ayat (1),putusan_narkotika 5.pdf,14,Excel,Fahir,verified
+P006,vonisBulan,66,putusan_narkotika 6.pdf,18,Excel,Fahir,verified
+P006,beratBarangBuktiGram,0.189,putusan_narkotika 6.pdf,18,Excel,Fahir,verified
+P006,pasalTerbukti,Pasal 114 ayat (1),putusan_narkotika 6.pdf,18,Excel,Fahir,verified
+P007,vonisBulan,72,putusan_narkotika 7.pdf,23,Excel,Fahir,verified
+P007,beratBarangBuktiGram,1.422,putusan_narkotika 7.pdf,2,Excel,Fahir,verified
 P007,pasalTerbukti,Pasal 114 ayat (1),putusan_narkotika 7.pdf,23,Excel,Fahir,verified
 P008,vonisBulan,84,putusan_narkotika 8.pdf,27,Excel,Fahir,verified
 P008,beratBarangBuktiGram,5.54,putusan_narkotika 8.pdf,27,Excel,Fahir,verified
@@ -32,9 +32,9 @@ P010,pasalTerbukti,Pasal 114 Ayat (2) Jo Pasal 132 ayat (1),putusan_narkotika 10
 P011,vonisBulan,90,putusan_narkotika 11.pdf,22,Excel,Fahir,verified
 P011,beratBarangBuktiGram,9.863,putusan_narkotika 11.pdf,23,Excel,Fahir,verified
 P011,pasalTerbukti,Pasal 114 Ayat (2) UU RI No 35 tahun 2009 Jis Lampiran II UU RI No 1 Tahun 2026,putusan_narkotika 11.pdf,22,Excel,Fahir,verified
-P012,vonisBulan,96,putusan_narkotika 12.pdf,24,Excel,Fahir,unverified
-P012,beratBarangBuktiGram,996.70,putusan_narkotika 12.pdf,25,Excel,Fahir,unverified
-P012,pasalTerbukti,Pasal 114 Ayat (2) Jo Pasal 132 Ayat (1) Undang-Undang Republik Indonesia Nomor 35 tahun 2009 tentang Narkotika,putusan_narkotika 12.pdf,24,Excel,Fahir,unverified
+P012,vonisBulan,96,putusan_narkotika 12.pdf,24,Excel,Fahir,verified
+P012,beratBarangBuktiGram,996.70,putusan_narkotika 12.pdf,25,Excel,Fahir,verified
+P012,pasalTerbukti,Pasal 114 Ayat (2) Jo Pasal 132 Ayat (1) Undang-Undang Republik Indonesia Nomor 35 tahun 2009 tentang Narkotika,putusan_narkotika 12.pdf,24,Excel,Fahir,verified
 P013,vonisBulan,72,putusan_narkotika 13.pdf,21,Excel,Fahir,verified
 P013,beratBarangBuktiGram,1.825,putusan_narkotika 13.pdf,11,Excel,Fahir,verified
 P013,pasalTerbukti,Pasal 114 ayat (1) UU No.35 tahun 2009 Tentang Narkotika Juncto UU RI no 1 Tahun 2023 tentang KUHP Juncto UU RI No 1 Tahun 2026 tentang penyesuaian pidana,putusan_narkotika 13.pdf,21,Excel,Fahir,verified
@@ -88,7 +88,7 @@ P029,beratBarangBuktiGram,1.300,putusan_29.pdf,18,Fahir,Excel,verified
 P029,pasalTerbukti,Pasal 114 Ayat (1),putusan_29.pdf,15,Fahir,Excel,verified
 P030,vonisBulan,84,putusan_30.pdf,38,Fahir,Excel,verified
 P030,beratBarangBuktiGram,34.455,putusan_30.pdf,22,Fahir,Excel,verified
-P030,pasalTerbukti,Pasal 609 Ayat (2) huruf a,putusan_30.pdf,38,Fahir,Excel,verified
+P030,pasalTerbukti,Pasal 609 Ayat (2) huruf a,putusan_30.pdf,38,Fahir,verified
 P031,vonisBulan,228,putusan_31.pdf,36,Fahir,Excel,verified
 P031,beratBarangBuktiGram,12961.18,putusan_31.pdf,2,Fahir,Excel,verified
 P031,pasalTerbukti,Pasal 114 ayat (2) jo. Pasal 132 ayat (1),putusan_31.pdf,36,Fahir,Excel,verified
@@ -121,7 +121,7 @@ P040,beratBarangBuktiGram,295.80,putusan_40.pdf,2,Fahir,Excel,verified
 P040,pasalTerbukti,Pasal 114 ayat (2),putusan_40.pdf,35,Fahir,Excel,verified
 P041,vonisBulan,96,putusan_41.pdf,19,Fahir,Excel,verified
 P041,beratBarangBuktiGram,15.479,putusan_41.pdf,3,Fahir,Excel,verified
-P041,pasalTerbukti,Pasal 114 ayat (2),putusan_41.pdf,17,Fahir,Excel,verified
+P041,pasalTerbukti,Pasal 114 ayat (2),putusan_41.pdf,17,Fahir,verified
 P042,vonisBulan,120,putusan_42.pdf,28,Fahir,Excel,verified
 P042,beratBarangBuktiGram,143.60,putusan_42.pdf,6,Fahir,Excel,verified
 P042,pasalTerbukti,Pasal 114 ayat (2),putusan_42.pdf,26,Fahir,Excel,verified

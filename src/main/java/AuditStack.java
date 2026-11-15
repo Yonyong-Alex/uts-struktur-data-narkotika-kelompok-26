@@ -49,6 +49,57 @@ public class AuditStack<T> {
         return top + 1;
     }
 
+    // Pencarian elemen dalam Stack secara non-destruktif (menggunakan stack sementara dan memulihkan urutan asal)
+    public T cariNonDestruktif(T target) {
+        if (isEmpty() || target == null) {
+            return null;
+        }
+
+        AuditStack<T> tempStack = new AuditStack<>();
+        T ditemukan = null;
+
+        while (!isEmpty()) {
+            T current = pop();
+            tempStack.push(current);
+            if (ditemukan == null && current.equals(target)) {
+                ditemukan = current;
+            }
+        }
+
+        // Pulihkan (restore) semua elemen kembali ke stack asal agar urutan LIFO tetap utuh
+        while (!tempStack.isEmpty()) {
+            push(tempStack.pop());
+        }
+
+        return ditemukan;
+    }
+
+    // Pencarian riwayat berdasarkan kata kunci (misal: Case ID, Nomor Perkara, atau Aksi) secara non-destruktif
+    public DynamicArray<T> cariRiwayatByKeyword(String keyword) {
+        DynamicArray<T> hasil = new DynamicArray<>();
+        if (isEmpty() || keyword == null || keyword.trim().isEmpty()) {
+            return hasil;
+        }
+
+        String target = keyword.trim().toLowerCase();
+        AuditStack<T> tempStack = new AuditStack<>();
+
+        while (!isEmpty()) {
+            T current = pop();
+            tempStack.push(current);
+            if (current.toString().toLowerCase().contains(target)) {
+                hasil.add(current);
+            }
+        }
+
+        // Pulihkan (restore) semua elemen kembali ke stack asal
+        while (!tempStack.isEmpty()) {
+            push(tempStack.pop());
+        }
+
+        return hasil;
+    }
+
     // Menyusun seluruh riwayat dari terbaru (top) ke terlama (bottom) sebagai String untuk memudahkan unit testing
     public String riwayatSebagaiTeks() {
         if (isEmpty()) {
