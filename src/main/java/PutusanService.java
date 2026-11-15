@@ -216,9 +216,6 @@ public class PutusanService {
                 minVonis,
                 maxVonis
         );
-<<<<<<< Updated upstream
-=======
-
     }
 
     // =========================================================================
@@ -244,6 +241,5 @@ public class PutusanService {
             auditStack.push(new AuditLog("HAPUS", terhapus.getCaseId(), terhapus.getNomorPerkara()));
         }
         return terhapus;
->>>>>>> Stashed changes
     }
 }

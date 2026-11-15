@@ -1,20 +1,20 @@
 public final class Putusan {
-    private String caseId;
-    private String nomorPerkara;
-    private String pengadilan;
-    private String tanggalPutusan;
-    private String terdakwaKode;
-    private String jenisNarkotika;
-    private double beratBarangBuktiGram;
-    private String pasalDakwaan;
-    private String pasalTerbukti;
-    private int tuntutanBulan;
-    private int vonisBulan;
-    private long dendaRupiah;
-    private String barangBukti;
-    private String keadaanMemberatkan;
-    private String keadaanMeringankan;
-    private String sourcePages;
+    private final String caseId;
+    private final String nomorPerkara;
+    private final String pengadilan;
+    private final String tanggalPutusan;
+    private final String terdakwaKode;
+    private final String jenisNarkotika;
+    private final double beratBarangBuktiGram;
+    private final String pasalDakwaan;
+    private final String pasalTerbukti;
+    private final int tuntutanBulan;
+    private final int vonisBulan;
+    private final long dendaRupiah;
+    private final String barangBukti;
+    private final String keadaanMemberatkan;
+    private final String keadaanMeringankan;
+    private final String sourcePages;
 
     // Constructor untuk inisialisasi data
     public Putusan(String caseId, String nomorPerkara, String pengadilan, String tanggalPutusan,
